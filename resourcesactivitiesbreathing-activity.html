@@ -1,0 +1,48 @@
+<div class="activity">
+    <h3>تمرين التنفس العميق لإدارة القلق</h3>
+    
+    <div class="steps">
+        <div class="step">
+            <h4>الخطوة 1: الوضعية المريحة</h4>
+            <p>اجلس أو استلقِ في وضع مريح، أغمض عينيك</p>
+        </div>
+        
+        <div class="step">
+            <h4>الخطوة 2: الشهيق</h4>
+            <p>خذ نفسًا عميقًا من الأنف لمدة 4 ثوان</p>
+            <div class="animation">🎈</div>
+        </div>
+        
+        <div class="step">
+            <h4>الخطوة 3: حبس النفس</h4>
+            <p>احبس نفسك لمدة 2 ثانية</p>
+            <div class="animation">⏱️</div>
+        </div>
+        
+        <div class="step">
+            <h4>الخطوة 4: الزفير</h4>
+            <p>أطلق الزفير ببطء من الفم لمدة 6 ثوان</p>
+            <div class="animation">💨</div>
+        </div>
+    </div>
+    
+    <button id="startExercise">بدء التمرين</button>
+    <div class="timer" id="timer">00:00</div>
+</div>
+
+<script>
+    // كود مؤقت التمرين
+    let timer;
+    document.getElementById('startExercise').addEventListener('click', function() {
+        let seconds = 300; // 5 دقائق
+        timer = setInterval(() => {
+            seconds--;
+            const mins = Math.floor(seconds / 60);
+            const secs = seconds % 60;
+            document.getElementById('timer').textContent = 
+                `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+            
+            if(seconds <= 0) clearInterval(timer);
+        }, 1000);
+    });
+</script>

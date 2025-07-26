@@ -1,0 +1,14 @@
+
+## خطوات رفع المشروع على GitHub
+
+1. أنشئ مستودعًا جديدًا على GitHub باسم `edu-platform`
+2. افتح محطة الأوامر في مجلد المشروع
+3. نفذ الأوامر التالية:
+
+```bash
+git init
+git add .
+git commit -m "الإصدار الأولي للمنصة التعليمية"
+git branch -M main
+git remote add origin https://github.com/your-username/edu-platform.git
+git push -u origin main
